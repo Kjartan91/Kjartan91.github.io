@@ -22,8 +22,15 @@ if (!sessionStorage.getItem("pickaxeRotation"))
 if (!sessionStorage.getItem("isMuted"))
     sessionStorage.setItem("isMuted", false);
 
+if (!sessionStorage.getItem("pickaxeUpgrade"))
+    sessionStorage.setItem("pickaxeUpgrade", 0);
+
+if (!sessionStorage.getItem("pickaxeM"))
+    sessionStorage.setItem("pickaxeM", 1);
+
 // Add upgrades
 addUpgrades();
+addPickaxeUpgrades();
 
 // Main shit
 setInterval(function()
@@ -100,7 +107,7 @@ diamondOre.addEventListener("click", function(Event)
 
     // Increase diamond counter
     let diamonds = +sessionStorage.getItem("diamonds");
-    diamonds++;
+    diamonds += 1 * sessionStorage.getItem("pickaxeM");
     sessionStorage.setItem("diamonds", diamonds);
 
     // Play sound if not muted
@@ -133,26 +140,16 @@ soundBtn.addEventListener("click", function()
     }
 });
 
-// Save diamonds to local storage 
+// Save diamonds and pickkaxe upgrades to local storage
 const saveBtn = document.getElementById("saveBtn");
 saveBtn.addEventListener("click", function()
 {
-    let diamondCounter = document.querySelector(".diamondCounter p");
-    localStorage.setItem("diamonds", sessionStorage.getItem("diamonds"));
+    saveGameLocal();
 });
 
-// Get diamonds from local storage 
+// Get diamonds and pickaxe from local storage
 const getSaveBtn = document.getElementById("getSaveBtn");
 getSaveBtn.addEventListener("click", function()
 {
-    let diamondCounter = document.querySelector(".diamondCounter p");
-    let diamonds = localStorage.getItem("diamonds")
-    sessionStorage.setItem("diamonds", diamonds)
-    //diamondCounter.innerHTML = localStorage.getItem("diamonds")
+    getGameLocal();
 });
-
-var steinhakke = new PickaxeUpgrade("Steinhakke", 100, "Et lite rykk opp.", "img/Pickaxe_stone.png")
-var jernhakke = new PickaxeUpgrade("Jernhakke", 100, "Et lite rykk opp.", "img/Pickaxe_iron.png")
-var gullhakke = new PickaxeUpgrade("Gullhakke", 100, "Et lite rykk opp.", "img/Pickaxe_golden.png")
-var diamanthakke = new PickaxeUpgrade("Diamanthakke", 100, "Et lite rykk opp.", "img/Pickaxe_diamond.png")
-var netheritehakke = new PickaxeUpgrade("Netheritehakke", 100, "Et lite rykk opp.", "img/Pickaxe_netherite.png")
