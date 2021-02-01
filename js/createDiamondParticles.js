@@ -12,7 +12,7 @@ class Diamond {
         img.style.position = "fixed";
         img.style.top = `${curY}px`;
         img.style.left = `${curX}px`;
-        img.style.zIndex = 3;
+        img.style.zIndex = 5;
         img.style.transform = `rotate(${Math.floor(Math.random() * 360)}deg)`;        //img.style.backgroundColor = "red";
         img.style.pointerEvents = "none";
 

@@ -1,31 +1,19 @@
 html, body {
     padding: 0px;
     margin: 0px;
+    cursor: none;
 }
 
 #mainBody {
     width: 1600px;
     height: 900px;
-    cursor: none;
+    /* cursor: none; */
     margin-left: auto;
     margin-right: auto;
     position: relative;
     top: 10px;
     background-color: #7aa9fc;
     border: 1px solid black;
-}
-
-#mansionImage {
-    position: absolute;
-    top: 0px;
-    z-index: 1;
-}
-
-.diamondOre {
-    position: absolute;
-    bottom: 150px;
-    left: 100px;
-    z-index: 2;
 }
 
 .diamondCounter {
@@ -47,13 +35,7 @@ html, body {
     font-size: 60px;
 }
 
-.martin {
-    position: absolute;
-    left: 300px;
-    transform-origin: bottom;
-}
-
-.pickaxe {
+/* .pickaxe {
     pointer-events: none;
     width: 0px;
     height: 0px;
@@ -62,11 +44,11 @@ html, body {
     z-index: 4;
     transform-origin: 160px 160px;
     transform: rotate(40deg);
-}
+} */
 
 .upgradePanel {
     position: absolute;
-    cursor: auto;
+    /* cursor: auto; */
     margin-top: 10px;
     right: 10px;
     width: 350px;
@@ -90,14 +72,14 @@ html, body {
 }
 
 #soundOpt:hover {
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .localButtons button {
     border: none;
     text-decoration: none;
     background-color: #e7e7e7;
-    cursor: pointer;
+    /* cursor: pointer; */
     padding: 5px 32px;
 }
 #saveBtn {

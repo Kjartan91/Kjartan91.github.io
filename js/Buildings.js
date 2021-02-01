@@ -97,6 +97,7 @@ class Upgrade {
             {
                 if (curDiamonds() >= curPrice)
                 {
+                    new MessageBox(`${name} åpnet!`, description, 5000)
                     nameElement.innerHTML = name;
                     imageElement.src = imagePath;
                     unlocked = true;
@@ -121,7 +122,7 @@ class Upgrade {
         {
             if (buy(Math.floor(curPrice)))
             {
-                curPrice *= priceMultiplier;
+               curPrice *= priceMultiplier;
                 curPrice = Math.floor(curPrice);
                 curPriceElement.innerHTML = curPrice;
 

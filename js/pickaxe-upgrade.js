@@ -29,14 +29,15 @@ class PickaxeUpgrade {
 }
 
 function changePickaxe(intUpgrade, multiplier) {
-    document.getElementById("img-pickaxe").src = "img/Pickaxe_" + intUpgrade + ".png";
+	//document.getElementById("img-pickaxe").src = "img/Pickaxe_" + intUpgrade + ".png";
+	cursor.setCursor(intUpgrade);
     sessionStorage.setItem("pickaxeUpgrade", intUpgrade);
     sessionStorage.setItem("pickaxeM", multiplier);
     saveGameLocal();
 }
 
 function addPickaxeUpgrades() {
-	var steinhakke = new PickaxeUpgrade("Steinhakke", 500, "Et lite rykk opp.", 1, 2.0)
+ 	var steinhakke = new PickaxeUpgrade("Steinhakke", 500, "Et lite rykk opp.", 1, 2.0)
 	var jernhakke = new PickaxeUpgrade("Jernhakke", 10000, "Et lite rykk opp.", 2, 10.0)
 	var gullhakke = new PickaxeUpgrade("Gullhakke", 50000, "Et lite rykk opp.", 3, 100.0)
 	var diamanthakke = new PickaxeUpgrade("Diamanthakke", 500000, "Et lite rykk opp.", 4, 500.0, )
