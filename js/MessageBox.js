@@ -10,7 +10,7 @@ class MessageBox
         messageBox.style.top = "150px";
         messageBox.style.width = "500px";
         messageBox.style.border = "2px solid gray";
-        messageBox.style.backgroundImage = "url('img/Wall.png')";
+        messageBox.style.backgroundImage = "url('img/UpgradePanel.png')";
         
         messageBox.style.backgroundColor = "red";
         messageBox.style.zIndex = "9";

@@ -3,8 +3,8 @@
 if (!sessionStorage.getItem("diamonds"))
     sessionStorage.setItem("diamonds", "0");
 
-if (!sessionStorage.getItem("pickaxeRotation"))
-    sessionStorage.setItem("pickaxeRotation", "0");
+/* if (!sessionStorage.getItem("pickaxeRotation"))
+    sessionStorage.setItem("pickaxeRotation", "0"); */
 
 if (!sessionStorage.getItem("isMuted"))
     sessionStorage.setItem("isMuted", false);
@@ -19,7 +19,8 @@ if (!sessionStorage.getItem("pickaxeM"))
 
 let audioPlayer = new AudioPlayer();
 let cursor = new Cursor();
-new Skybox();
+//ew Skybox();
+
 new Martin();
 
 addUpgrades();
@@ -27,47 +28,19 @@ addUpgrades();
 //new MessageBox("Viktig melding", "Jeppsann", 4000);
 
 // Mansion
-   let mansion = new Image();
+let mansion = new Image();
 mansion.src = "img/Mansion.png";
 mansion.style.position = "absolute";
 mansion.style.pointerEvents = "none";
 mansion.style.userSelect = "none";
 let doc = document.getElementById("mainBody");
-doc.appendChild(mansion);   
+doc.appendChild(mansion);
 
+let diamondCounter = new DiamondCounter();
 new DiamondOre();
 addPickaxeUpgrades();
 
-// Main shit
-setInterval(function()
-{
-    // Update diamond counter
-    let diamondCounter = document.querySelector(".diamondCounter p");
-    let diamonds = sessionStorage.getItem("diamonds");
-    diamondCounter.innerHTML = diamonds;
 
-    // Animate pickaxe on mining
-    const pickaxe = document.querySelector(".pickaxe");
-    let pickaxeRotation = sessionStorage.getItem("pickaxeRotation");
-    pickaxe.style.transform = `rotate(${pickaxeRotation}deg)`;
-
-    if (pickaxeRotation > 0)
-        pickaxeRotation -= 10;
-
-    sessionStorage.setItem("pickaxeRotation", pickaxeRotation);
-}, 40);
-
-// Make pickaxe follow cursor
-/* const mainBody = document.getElementById("mainBody");
-mainBody.addEventListener("mousemove", function(Event)
-{
-    const pickaxe = document.querySelector(".pickaxe");
-    let x = Event.pageX;
-    let y = Event.pageY;
-
-    pickaxe.style.left = `${x-15}px`;
-    pickaxe.style.top = `${y-25}px`;
-}); */
 
 // Sound on/off
 const soundBtn = document.getElementById("soundOpt");

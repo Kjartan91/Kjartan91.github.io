@@ -116,18 +116,18 @@ class Skybox
         context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
         context.fill(); */
 
-        setInterval(function()
-        {
+        //setInterval(function()
+        
             // test
-             centerX = Math.floor(Math.random() * 500);
-             centerY = Math.floor(Math.random() * 500);
+/*              centerX = Math.floor(Math.random() * 500);
+             centerY = Math.floor(Math.random() * 500); */
 
 
-            radius++;
+/*             radius++;
             context.beginPath();
             context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
             context.fillStyle = "Green";
-            context.fill();
-        }, 100) 
+            context.fill(); */
+        //}, 100) 
     }
 }

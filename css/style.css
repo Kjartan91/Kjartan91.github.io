@@ -16,44 +16,15 @@ html, body {
     border: 1px solid black;
 }
 
-.diamondCounter {
-    position: absolute;
-    bottom: 50px;
-    left: 100px;
-    z-index: 3;
-}
-
-.diamondCounter img {
-    width: 50%;
-    height: 50%;
-}
-.diamondCounter p {
-    position: absolute;
-    margin: 0px;
-    top: 10px;
-    left: 80px;
-    font-size: 60px;
-}
-
-/* .pickaxe {
-    pointer-events: none;
-    width: 0px;
-    height: 0px;
-    position: fixed;
-    background-color: green;
-    z-index: 4;
-    transform-origin: 160px 160px;
-    transform: rotate(40deg);
-} */
-
-.upgradePanel {
+#upgradePanel {
     position: absolute;
     /* cursor: auto; */
-    margin-top: 10px;
-    right: 10px;
+    
+    right: 0px;
     width: 350px;
-    height: 800px;
-    background-color: red;
+    height: 100%;
+ 
+    background-image: url("../img/UpgradePanel.png");
     z-index: 3;
 }
 

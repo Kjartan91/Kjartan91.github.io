@@ -41,6 +41,12 @@ class Cursor {
 
         doc.addEventListener("mousemove", mousemove.bind(this), false);
 
+
+
+
+
+        this.pickingInterv;
+
     }
 
     setCursor(cursorId)
@@ -72,15 +78,23 @@ class Cursor {
         
     }
 
-    pickDown()
-    {
-        this.img.style.transformOrigin = "bottom right";
-        this.img.style.rotate = "-45deg";
-    }
+
 
     pickUp()
     {
-        this.img.style.transformOrigin = "bottom right";
+        
+       // this.img.style.transformOrigin = "bottom right";
         this.img.style.rotate = "0deg";
+        //this.img.style.transformOrigin = "20px 25px";
+    }
+
+    pickDown()
+    {
+       
+        this.img.style.transformOrigin = "bottom right";
+        this.img.style.rotate = "-45deg";
+        //this.img.style.transformOrigin = "20px 25px";
+
+        //pickingInterv = setTimeout(pickUp.bind(this), 1000);
     }
 }

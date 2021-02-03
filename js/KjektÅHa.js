@@ -40,3 +40,21 @@ function getGameLocal() {
     sessionStorage.setItem("pickaxeUpgrade", pickaxe);
     //TODO: Kjartan! Get buildings (and upgrades) -- oppdater de tingene som leses fra sessionStorage, hvis det er sånn det funker. Har ikke orket å se på det ennå.
 }
+
+function convertDiaNum(number) {
+
+    if (number < 1000)
+        return Math.floor(number);
+
+    if (number < 1000000)
+        return `${(number / 1000).toFixed(1)} tusen`;
+
+    if (number < 1000000000)
+        return `${(number / 1000000).toFixed(1)} millioner`;
+
+    if (number < 1000000000000)
+        return `${(number / 1000000000).toFixed(1)} milliarder`;
+
+    return "Du er alt for rik";
+
+}

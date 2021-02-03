@@ -12,15 +12,22 @@ class DiamondOre {
         let direction = "Right";
 
         // Draw image
-        let img = new Image();
-        img.src = "img/DiamondOre.png";
+        let img = document.createElement("div");   //new Image();
+        //img.style.backgroundColor = "red";
+
+        img.style.backgroundImage = "url('img/DiamondOre.png')"
+        //img.src = "img/DiamondOre.png";
         img.id = "DiamondOre";
         img.style.userSelect = "none";
         //img.style.pointerEvents = "none";
         //img.setAttribute("draggable", false);
         img.style.position = "absolute";
-        img.style.left = "100px";
-        img.style.bottom = "150px"
+        img.style.left = "500px";
+        img.style.bottom = "20px"
+
+        img.style.width = "300px";
+        img.style.height = "300px";
+
         img.style.transformOrigin = "50% 70%";
         
         let doc = document.getElementById("mainBody");
@@ -70,7 +77,7 @@ class DiamondOre {
         img.addEventListener("mouseout", function(Event)
         {
             cursor.makeSmall();
-           // cursor.pickUp();
+            cursor.pickUp();
         });
 
         // On click
@@ -93,6 +100,5 @@ class DiamondOre {
         {
             cursor.pickUp();
         });
-
     }    
 }
